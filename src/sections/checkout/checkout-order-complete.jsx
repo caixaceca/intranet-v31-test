@@ -68,7 +68,7 @@ export function CheckoutOrderComplete({ onResetCart, onDownloadPDF, ...other }) 
         >
           <Button
             component={RouterLink}
-            href={paths.product.root}
+            href={paths.page403}
             size="large"
             color="inherit"
             variant="outlined"

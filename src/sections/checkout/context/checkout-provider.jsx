@@ -29,9 +29,7 @@ export function CheckoutProvider({ children }) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const activeStep = pathname.includes(paths.product.checkout)
-    ? Number(searchParams.get('step'))
-    : null;
+  const activeStep = pathname.includes(paths.page403) ? Number(searchParams.get('step')) : null;
 
   const [loading, setLoading] = useState(true);
 
@@ -78,9 +76,7 @@ export function CheckoutProvider({ children }) {
       };
 
       const targetStep = stepNumbers[type];
-      const queryString = new URLSearchParams({ step: `${targetStep}` }).toString();
-      const redirectPath =
-        targetStep === 0 ? paths.product.checkout : `${paths.product.checkout}?${queryString}`;
+      const redirectPath = targetStep === 0 ? paths.page403 : paths.page403;
 
       router.push(redirectPath);
     },

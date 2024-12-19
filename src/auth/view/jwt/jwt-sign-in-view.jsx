@@ -18,7 +18,6 @@ import { RouterLink } from 'src/routes/components';
 import { Iconify } from 'src/components/iconify';
 import { Form, Field } from 'src/components/hook-form';
 
-import { useAuthContext } from '../../hooks';
 import { getErrorMessage } from '../../utils';
 import { FormHead } from '../../components/form-head';
 import { signInWithPassword } from '../../context/jwt';
@@ -43,8 +42,6 @@ export function JwtSignInView() {
 
   const showPassword = useBoolean();
 
-  const { checkUserSession } = useAuthContext();
-
   const [errorMessage, setErrorMessage] = useState('');
 
   const defaultValues = {
@@ -65,7 +62,6 @@ export function JwtSignInView() {
   const onSubmit = handleSubmit(async (data) => {
     try {
       await signInWithPassword({ email: data.email, password: data.password });
-      await checkUserSession?.();
 
       router.refresh();
     } catch (error) {
