@@ -46,7 +46,7 @@ export function ChatView() {
   useEffect(() => {
     if (!selectedConversationId) {
       startTransition(() => {
-        router.push(paths.dashboard.chat);
+        router.push(paths.chat);
       });
     }
   }, [conversationError, router, selectedConversationId]);

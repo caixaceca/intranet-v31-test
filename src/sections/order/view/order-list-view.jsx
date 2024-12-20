@@ -152,8 +152,8 @@ export function OrderListView() {
         <CustomBreadcrumbs
           heading="List"
           links={[
-            { name: 'Dashboard', href: paths.dashboard.root },
-            { name: 'Order', href: paths.dashboard.order.root },
+            { name: 'Dashboard', href: paths.root },
+            { name: 'Order', href: paths.order.root },
             { name: 'List' },
           ]}
           sx={{ mb: { xs: 3, md: 5 } }}
@@ -263,7 +263,7 @@ export function OrderListView() {
                         selected={table.selected.includes(row.id)}
                         onSelectRow={() => table.onSelectRow(row.id)}
                         onDeleteRow={() => handleDeleteRow(row.id)}
-                        detailsHref={paths.dashboard.order.details(row.id)}
+                        detailsHref={paths.order.details(row.id)}
                       />
                     ))}
 

@@ -13,10 +13,10 @@ export function JobEditView({ job }) {
     <DashboardContent>
       <CustomBreadcrumbs
         heading="Edit"
-        backHref={paths.dashboard.job.root}
+        backHref={paths.job.root}
         links={[
-          { name: 'Dashboard', href: paths.dashboard.root },
-          { name: 'Job', href: paths.dashboard.job.root },
+          { name: 'Dashboard', href: paths.root },
+          { name: 'Job', href: paths.job.root },
           { name: job?.title },
         ]}
         sx={{ mb: { xs: 3, md: 5 } }}

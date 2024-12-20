@@ -13,10 +13,10 @@ export function PostEditView({ post }) {
     <DashboardContent>
       <CustomBreadcrumbs
         heading="Edit"
-        backHref={paths.dashboard.post.root}
+        backHref={paths.post.root}
         links={[
-          { name: 'Dashboard', href: paths.dashboard.root },
-          { name: 'Blog', href: paths.dashboard.post.root },
+          { name: 'Dashboard', href: paths.root },
+          { name: 'Blog', href: paths.post.root },
           { name: post?.title },
         ]}
         sx={{ mb: { xs: 3, md: 5 } }}

@@ -75,7 +75,7 @@ export function ChatMessageInput({
         } else {
           // If the conversation does not exist
           const res = await createConversation(conversationData);
-          router.push(`${paths.dashboard.chat}?id=${res.conversation.id}`);
+          router.push(`${paths.chat}?id=${res.conversation.id}`);
 
           onAddRecipients([]);
         }

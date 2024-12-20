@@ -33,7 +33,7 @@ export function PermissionDeniedView() {
     <DashboardContent>
       <CustomBreadcrumbs
         heading="Permission"
-        links={[{ name: 'Dashboard', href: paths.dashboard.root }, { name: 'Permission' }]}
+        links={[{ name: 'Dashboard', href: paths.root }, { name: 'Permission' }]}
         sx={{ mb: { xs: 3, md: 5 } }}
       />
       <ToggleButtonGroup

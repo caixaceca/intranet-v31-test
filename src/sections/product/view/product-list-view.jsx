@@ -121,7 +121,7 @@ export function ProductListView() {
       minWidth: 360,
       hideable: false,
       renderCell: (params) => (
-        <RenderCellProduct params={params} href={paths.dashboard.product.details(params.row.id)} />
+        <RenderCellProduct params={params} href={paths.product.details(params.row.id)} />
       ),
     },
     {
@@ -169,13 +169,13 @@ export function ProductListView() {
           showInMenu
           icon={<Iconify icon="solar:eye-bold" />}
           label="View"
-          href={paths.dashboard.product.details(params.row.id)}
+          href={paths.product.details(params.row.id)}
         />,
         <GridActionsLinkItem
           showInMenu
           icon={<Iconify icon="solar:pen-bold" />}
           label="Edit"
-          href={paths.dashboard.product.edit(params.row.id)}
+          href={paths.product.edit(params.row.id)}
         />,
         <GridActionsCellItem
           showInMenu
@@ -224,14 +224,14 @@ export function ProductListView() {
         <CustomBreadcrumbs
           heading="List"
           links={[
-            { name: 'Dashboard', href: paths.dashboard.root },
-            { name: 'Product', href: paths.dashboard.product.root },
+            { name: 'Dashboard', href: paths.root },
+            { name: 'Product', href: paths.product.root },
             { name: 'List' },
           ]}
           action={
             <Button
               component={RouterLink}
-              href={paths.dashboard.product.new}
+              href={paths.product.new}
               variant="contained"
               startIcon={<Iconify icon="mingcute:add-line" />}
             >

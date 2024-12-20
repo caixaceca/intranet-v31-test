@@ -19,14 +19,14 @@ export const msalConfig = {
 };
 
 export const CONFIG = {
-  appName: 'Minimal UI',
+  appName: 'Intranet',
   appVersion: packageJson.version,
   serverUrl: import.meta.env.VITE_SERVER_URL ?? '',
   assetsDir: import.meta.env.VITE_ASSETS_DIR ?? '',
   auth: {
     method: 'jwt',
     skip: false,
-    redirectPath: paths.dashboard.root,
+    redirectPath: paths.root,
   },
   /**
    * Mapbox

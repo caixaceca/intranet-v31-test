@@ -98,7 +98,7 @@ export function InvoiceNewEditForm({ currentInvoice }) {
       await new Promise((resolve) => setTimeout(resolve, 500));
       reset();
       loadingSave.onFalse();
-      router.push(paths.dashboard.invoice.root);
+      router.push(paths.invoice.root);
       console.info('DATA', JSON.stringify(data, null, 2));
     } catch (error) {
       console.error(error);
@@ -113,7 +113,7 @@ export function InvoiceNewEditForm({ currentInvoice }) {
       await new Promise((resolve) => setTimeout(resolve, 500));
       reset();
       loadingSend.onFalse();
-      router.push(paths.dashboard.invoice.root);
+      router.push(paths.invoice.root);
       console.info('DATA', JSON.stringify(data, null, 2));
     } catch (error) {
       console.error(error);

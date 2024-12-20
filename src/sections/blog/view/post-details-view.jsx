@@ -62,7 +62,7 @@ export function PostDetailsView({ post, loading, error }) {
           action={
             <Button
               component={RouterLink}
-              href={paths.dashboard.post.root}
+              href={paths.post.root}
               startIcon={<Iconify width={16} icon="eva:arrow-ios-back-fill" />}
               sx={{ mt: 3 }}
             >
@@ -79,8 +79,8 @@ export function PostDetailsView({ post, loading, error }) {
     <DashboardContent maxWidth={false} disablePadding>
       <Container maxWidth={false} sx={{ px: { sm: 5 } }}>
         <PostDetailsToolbar
-          backHref={paths.dashboard.post.root}
-          editHref={paths.dashboard.post.edit(`${post?.title}`)}
+          backHref={paths.post.root}
+          editHref={paths.post.edit(`${post?.title}`)}
           liveHref={paths.post.details(`${post?.title}`)}
           publish={`${publish}`}
           onChangePublish={handleChangePublish}

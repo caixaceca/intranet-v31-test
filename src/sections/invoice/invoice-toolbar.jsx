@@ -59,10 +59,7 @@ export function InvoiceToolbar({ invoice, currentStatus, statusOptions, onChange
           }}
         >
           <Tooltip title="Edit">
-            <IconButton
-              component={RouterLink}
-              href={paths.dashboard.invoice.edit(`${invoice?.id}`)}
-            >
+            <IconButton component={RouterLink} href={paths.invoice.edit(`${invoice?.id}`)}>
               <Iconify icon="solar:pen-bold" />
             </IconButton>
           </Tooltip>

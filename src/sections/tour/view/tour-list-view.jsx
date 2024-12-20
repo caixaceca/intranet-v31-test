@@ -71,7 +71,7 @@ export function TourListView() {
         flexDirection: { xs: 'column', sm: 'row' },
       }}
     >
-      <TourSearch redirectPath={(id) => paths.dashboard.tour.details(id)} />
+      <TourSearch redirectPath={(id) => paths.tour.details(id)} />
 
       <Box sx={{ gap: 1, flexShrink: 0, display: 'flex' }}>
         <TourFilters
@@ -101,14 +101,14 @@ export function TourListView() {
       <CustomBreadcrumbs
         heading="List"
         links={[
-          { name: 'Dashboard', href: paths.dashboard.root },
-          { name: 'Tour', href: paths.dashboard.tour.root },
+          { name: 'Dashboard', href: paths.root },
+          { name: 'Tour', href: paths.tour.root },
           { name: 'List' },
         ]}
         action={
           <Button
             component={RouterLink}
-            href={paths.dashboard.tour.new}
+            href={paths.tour.new}
             variant="contained"
             startIcon={<Iconify icon="mingcute:add-line" />}
           >

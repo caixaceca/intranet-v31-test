@@ -203,14 +203,14 @@ export function InvoiceListView() {
         <CustomBreadcrumbs
           heading="List"
           links={[
-            { name: 'Dashboard', href: paths.dashboard.root },
-            { name: 'Invoice', href: paths.dashboard.invoice.root },
+            { name: 'Dashboard', href: paths.root },
+            { name: 'Invoice', href: paths.invoice.root },
             { name: 'List' },
           ]}
           action={
             <Button
               component={RouterLink}
-              href={paths.dashboard.invoice.new}
+              href={paths.invoice.new}
               variant="contained"
               startIcon={<Iconify icon="mingcute:add-line" />}
             >
@@ -390,8 +390,8 @@ export function InvoiceListView() {
                         selected={table.selected.includes(row.id)}
                         onSelectRow={() => table.onSelectRow(row.id)}
                         onDeleteRow={() => handleDeleteRow(row.id)}
-                        editHref={paths.dashboard.invoice.edit(row.id)}
-                        detailsHref={paths.dashboard.invoice.details(row.id)}
+                        editHref={paths.invoice.edit(row.id)}
+                        detailsHref={paths.invoice.details(row.id)}
                       />
                     ))}
 

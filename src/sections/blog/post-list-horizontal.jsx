@@ -16,8 +16,8 @@ export function PostListHorizontal({ posts, loading }) {
       <PostItemHorizontal
         key={post.id}
         post={post}
-        detailsHref={paths.dashboard.post.details(post.title)}
-        editHref={paths.dashboard.post.edit(post.title)}
+        detailsHref={paths.post.details(post.title)}
+        editHref={paths.post.edit(post.title)}
       />
     ));
 

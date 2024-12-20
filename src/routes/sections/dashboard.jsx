@@ -1,14 +1,11 @@
 import { Outlet } from 'react-router';
 import { lazy, Suspense } from 'react';
 
-import { CONFIG } from 'src/global-config';
 import { DashboardLayout } from 'src/layouts/dashboard';
 
 import { LoadingScreen } from 'src/components/loading-screen';
 
 import { AccountLayout } from 'src/sections/account/account-layout';
-
-import { AuthGuard } from 'src/auth/guard';
 
 // ----------------------------------------------------------------------
 
@@ -97,8 +94,7 @@ const accountLayout = () => (
 
 export const dashboardRoutes = [
   {
-    path: 'dashboard',
-    element: CONFIG.auth.skip ? dashboardLayout() : <AuthGuard>{dashboardLayout()}</AuthGuard>,
+    element: dashboardLayout(),
     children: [
       { index: true, element: <IndexPage /> },
       { path: 'ecommerce', element: <OverviewEcommercePage /> },

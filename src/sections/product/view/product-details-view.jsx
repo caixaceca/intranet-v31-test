@@ -80,7 +80,7 @@ export function ProductDetailsView({ product, error, loading }) {
           action={
             <Button
               component={RouterLink}
-              href={paths.dashboard.product.root}
+              href={paths.product.root}
               startIcon={<Iconify width={16} icon="eva:arrow-ios-back-fill" />}
               sx={{ mt: 3 }}
             >
@@ -96,9 +96,9 @@ export function ProductDetailsView({ product, error, loading }) {
   return (
     <DashboardContent>
       <ProductDetailsToolbar
-        backHref={paths.dashboard.product.root}
+        backHref={paths.product.root}
         liveHref={paths.product.details(`${product?.id}`)}
-        editHref={paths.dashboard.product.edit(`${product?.id}`)}
+        editHref={paths.product.edit(`${product?.id}`)}
         publish={publish}
         onChangePublish={handleChangePublish}
         publishOptions={PRODUCT_PUBLISH_OPTIONS}

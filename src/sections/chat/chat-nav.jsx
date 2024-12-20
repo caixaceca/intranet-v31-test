@@ -86,7 +86,7 @@ export function ChatNav({ loading, contacts, collapseNav, conversations, selecte
     if (!mdUp) {
       onCloseMobile();
     }
-    router.push(paths.dashboard.chat);
+    router.push(paths.chat);
   }, [mdUp, onCloseMobile, router]);
 
   const handleSearchContacts = useCallback(
@@ -112,7 +112,7 @@ export function ChatNav({ loading, contacts, collapseNav, conversations, selecte
     async (result) => {
       handleClickAwaySearch();
 
-      const linkTo = (id) => router.push(`${paths.dashboard.chat}?id=${id}`);
+      const linkTo = (id) => router.push(`${paths.chat}?id=${id}`);
 
       try {
         // Check if the conversation already exists

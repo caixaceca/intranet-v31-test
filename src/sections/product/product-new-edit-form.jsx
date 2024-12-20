@@ -121,7 +121,7 @@ export function ProductNewEditForm({ currentProduct }) {
       await new Promise((resolve) => setTimeout(resolve, 500));
       reset();
       toast.success(currentProduct ? 'Update success!' : 'Create success!');
-      router.push(paths.dashboard.product.root);
+      router.push(paths.product.root);
       console.info('DATA', updatedData);
     } catch (error) {
       console.error(error);

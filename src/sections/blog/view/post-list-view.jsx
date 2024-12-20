@@ -45,14 +45,14 @@ export function PostListView() {
       <CustomBreadcrumbs
         heading="List"
         links={[
-          { name: 'Dashboard', href: paths.dashboard.root },
-          { name: 'Blog', href: paths.dashboard.post.root },
+          { name: 'Dashboard', href: paths.root },
+          { name: 'Blog', href: paths.post.root },
           { name: 'List' },
         ]}
         action={
           <Button
             component={RouterLink}
-            href={paths.dashboard.post.new}
+            href={paths.post.new}
             variant="contained"
             startIcon={<Iconify icon="mingcute:add-line" />}
           >
@@ -72,7 +72,7 @@ export function PostListView() {
           alignItems: { xs: 'flex-end', sm: 'center' },
         }}
       >
-        <PostSearch redirectPath={(title) => paths.dashboard.post.details(title)} />
+        <PostSearch redirectPath={(title) => paths.post.details(title)} />
 
         <PostSort
           sort={sortBy}

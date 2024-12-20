@@ -33,7 +33,7 @@ export function OrderDetailsView({ order }) {
         status={status}
         createdAt={order?.createdAt}
         orderNumber={order?.orderNumber}
-        backHref={paths.dashboard.order.root}
+        backHref={paths.order.root}
         onChangeStatus={handleChangeStatus}
         statusOptions={ORDER_STATUS_OPTIONS}
       />

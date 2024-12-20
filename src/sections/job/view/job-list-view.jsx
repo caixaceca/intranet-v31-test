@@ -74,7 +74,7 @@ export function JobListView() {
         alignItems: { xs: 'flex-end', sm: 'center' },
       }}
     >
-      <JobSearch redirectPath={(id) => paths.dashboard.job.details(id)} />
+      <JobSearch redirectPath={(id) => paths.job.details(id)} />
 
       <Box sx={{ gap: 1, flexShrink: 0, display: 'flex' }}>
         <JobFilters
@@ -105,14 +105,14 @@ export function JobListView() {
       <CustomBreadcrumbs
         heading="List"
         links={[
-          { name: 'Dashboard', href: paths.dashboard.root },
-          { name: 'Job', href: paths.dashboard.job.root },
+          { name: 'Dashboard', href: paths.root },
+          { name: 'Job', href: paths.job.root },
           { name: 'List' },
         ]}
         action={
           <Button
             component={RouterLink}
-            href={paths.dashboard.job.new}
+            href={paths.job.new}
             variant="contained"
             startIcon={<Iconify icon="mingcute:add-line" />}
           >

@@ -27,8 +27,8 @@ export function TourList({ tours }) {
           <TourItem
             key={tour.id}
             tour={tour}
-            editHref={paths.dashboard.tour.edit(tour.id)}
-            detailsHref={paths.dashboard.tour.details(tour.id)}
+            editHref={paths.tour.edit(tour.id)}
+            detailsHref={paths.tour.details(tour.id)}
             onDelete={() => handleDelete(tour.id)}
           />
         ))}

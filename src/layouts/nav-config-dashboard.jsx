@@ -42,19 +42,22 @@ const ICONS = {
 // ----------------------------------------------------------------------
 
 export const navData = [
+  {
+    items: [{ title: 'Início', path: paths.root, icon: ICONS.dashboard }],
+  },
   /**
    * Overview
    */
   {
     subheader: 'Overview',
     items: [
-      { title: 'App', path: paths.dashboard.root, icon: ICONS.dashboard },
-      { title: 'Ecommerce', path: paths.dashboard.general.ecommerce, icon: ICONS.ecommerce },
-      { title: 'Analytics', path: paths.dashboard.general.analytics, icon: ICONS.analytics },
-      { title: 'Banking', path: paths.dashboard.general.banking, icon: ICONS.banking },
-      { title: 'Booking', path: paths.dashboard.general.booking, icon: ICONS.booking },
-      { title: 'File', path: paths.dashboard.general.file, icon: ICONS.file },
-      { title: 'Course', path: paths.dashboard.general.course, icon: ICONS.course },
+      { title: 'App', path: paths.general.app, icon: ICONS.dashboard },
+      { title: 'Ecommerce', path: paths.general.ecommerce, icon: ICONS.ecommerce },
+      { title: 'Analytics', path: paths.general.analytics, icon: ICONS.analytics },
+      { title: 'Banking', path: paths.general.banking, icon: ICONS.banking },
+      { title: 'Booking', path: paths.general.booking, icon: ICONS.booking },
+      { title: 'File', path: paths.general.file, icon: ICONS.file },
+      { title: 'Course', path: paths.general.course, icon: ICONS.course },
     ],
   },
   /**
@@ -65,85 +68,85 @@ export const navData = [
     items: [
       {
         title: 'User',
-        path: paths.dashboard.user.root,
+        path: paths.user.root,
         icon: ICONS.user,
         children: [
-          { title: 'Profile', path: paths.dashboard.user.root },
-          { title: 'Cards', path: paths.dashboard.user.cards },
-          { title: 'List', path: paths.dashboard.user.list },
-          { title: 'Create', path: paths.dashboard.user.new },
-          { title: 'Edit', path: paths.dashboard.user.demo.edit },
-          { title: 'Account', path: paths.dashboard.user.account },
+          { title: 'Profile', path: paths.user.root },
+          { title: 'Cards', path: paths.user.cards },
+          { title: 'List', path: paths.user.list },
+          { title: 'Create', path: paths.user.new },
+          { title: 'Edit', path: paths.user.demo.edit },
+          { title: 'Account', path: paths.user.account },
         ],
       },
       {
         title: 'Product',
-        path: paths.dashboard.product.root,
+        path: paths.product.root,
         icon: ICONS.product,
         children: [
-          { title: 'List', path: paths.dashboard.product.root },
-          { title: 'Details', path: paths.dashboard.product.demo.details },
-          { title: 'Create', path: paths.dashboard.product.new },
-          { title: 'Edit', path: paths.dashboard.product.demo.edit },
+          { title: 'List', path: paths.product.root },
+          { title: 'Details', path: paths.product.demo.details },
+          { title: 'Create', path: paths.product.new },
+          { title: 'Edit', path: paths.product.demo.edit },
         ],
       },
       {
         title: 'Order',
-        path: paths.dashboard.order.root,
+        path: paths.order.root,
         icon: ICONS.order,
         children: [
-          { title: 'List', path: paths.dashboard.order.root },
-          { title: 'Details', path: paths.dashboard.order.demo.details },
+          { title: 'List', path: paths.order.root },
+          { title: 'Details', path: paths.order.demo.details },
         ],
       },
       {
         title: 'Invoice',
-        path: paths.dashboard.invoice.root,
+        path: paths.invoice.root,
         icon: ICONS.invoice,
         children: [
-          { title: 'List', path: paths.dashboard.invoice.root },
-          { title: 'Details', path: paths.dashboard.invoice.demo.details },
-          { title: 'Create', path: paths.dashboard.invoice.new },
-          { title: 'Edit', path: paths.dashboard.invoice.demo.edit },
+          { title: 'List', path: paths.invoice.root },
+          { title: 'Details', path: paths.invoice.demo.details },
+          { title: 'Create', path: paths.invoice.new },
+          { title: 'Edit', path: paths.invoice.demo.edit },
         ],
       },
       {
         title: 'Blog',
-        path: paths.dashboard.post.root,
+        path: paths.post.root,
         icon: ICONS.blog,
         children: [
-          { title: 'List', path: paths.dashboard.post.root },
-          { title: 'Details', path: paths.dashboard.post.demo.details },
-          { title: 'Create', path: paths.dashboard.post.new },
-          { title: 'Edit', path: paths.dashboard.post.demo.edit },
+          { title: 'List', path: paths.post.root },
+          { title: 'Details', path: paths.post.demo.details },
+          { title: 'Create', path: paths.post.new },
+          { title: 'Edit', path: paths.post.demo.edit },
         ],
       },
       {
         title: 'Job',
-        path: paths.dashboard.job.root,
+        path: paths.job.root,
         icon: ICONS.job,
         children: [
-          { title: 'List', path: paths.dashboard.job.root },
-          { title: 'Details', path: paths.dashboard.job.demo.details },
-          { title: 'Create', path: paths.dashboard.job.new },
-          { title: 'Edit', path: paths.dashboard.job.demo.edit },
+          { title: 'List', path: paths.job.root },
+          { title: 'Details', path: paths.job.demo.details },
+          { title: 'Create', path: paths.job.new },
+          { title: 'Edit', path: paths.job.demo.edit },
         ],
       },
       {
         title: 'Tour',
-        path: paths.dashboard.tour.root,
+        path: paths.tour.root,
         icon: ICONS.tour,
         children: [
-          { title: 'List', path: paths.dashboard.tour.root },
-          { title: 'Details', path: paths.dashboard.tour.demo.details },
-          { title: 'Create', path: paths.dashboard.tour.new },
-          { title: 'Edit', path: paths.dashboard.tour.demo.edit },
+          { title: 'List', path: paths.tour.root },
+          { title: 'Details', path: paths.tour.demo.details },
+          { title: 'Create', path: paths.tour.new },
+          { title: 'Edit', path: paths.tour.demo.edit },
         ],
       },
-      { title: 'File manager', path: paths.dashboard.fileManager, icon: ICONS.folder },
+      { title: 'File manager', path: paths.fileManager, icon: ICONS.folder },
       {
         title: 'Mail',
-        path: paths.dashboard.mail,
+        path: paths.mail,
         icon: ICONS.mail,
         info: (
           <Label color="error" variant="inverted">
@@ -151,9 +154,9 @@ export const navData = [
           </Label>
         ),
       },
-      { title: 'Chat', path: paths.dashboard.chat, icon: ICONS.chat },
-      { title: 'Calendar', path: paths.dashboard.calendar, icon: ICONS.calendar },
-      { title: 'Kanban', path: paths.dashboard.kanban, icon: ICONS.kanban },
+      { title: 'Chat', path: paths.chat, icon: ICONS.chat },
+      { title: 'Calendar', path: paths.calendar, icon: ICONS.calendar },
+      { title: 'Kanban', path: paths.kanban, icon: ICONS.kanban },
     ],
   },
   /**
@@ -169,38 +172,38 @@ export const navData = [
         // roles: ['admin', 'manager'] Only admin/manager can see this item.
         // Reference from 'src/guards/RoleBasedGuard'.
         title: 'Permission',
-        path: paths.dashboard.permission,
+        path: paths.permission,
         icon: ICONS.lock,
         roles: ['admin', 'manager'],
         caption: 'Only admin can see this item',
       },
       {
         title: 'Level',
-        path: '#/dashboard/menu_level',
+        path: '#/menu_level',
         icon: ICONS.menuItem,
         children: [
           {
             title: 'Level 1a',
-            path: '#/dashboard/menu_level/menu_level_1a',
+            path: '#/menu_level/menu_level_1a',
             children: [
-              { title: 'Level 2a', path: '#/dashboard/menu_level/menu_level_1a/menu_level_2a' },
+              { title: 'Level 2a', path: '#/menu_level/menu_level_1a/menu_level_2a' },
               {
                 title: 'Level 2b',
-                path: '#/dashboard/menu_level/menu_level_1a/menu_level_2b',
+                path: '#/menu_level/menu_level_1a/menu_level_2b',
                 children: [
                   {
                     title: 'Level 3a',
-                    path: '#/dashboard/menu_level/menu_level_1a/menu_level_2b/menu_level_3a',
+                    path: '#/menu_level/menu_level_1a/menu_level_2b/menu_level_3a',
                   },
                   {
                     title: 'Level 3b',
-                    path: '#/dashboard/menu_level/menu_level_1a/menu_level_2b/menu_level_3b',
+                    path: '#/menu_level/menu_level_1a/menu_level_2b/menu_level_3b',
                   },
                 ],
               },
             ],
           },
-          { title: 'Level 1b', path: '#/dashboard/menu_level/menu_level_1b' },
+          { title: 'Level 1b', path: '#/menu_level/menu_level_1b' },
         ],
       },
       {
@@ -232,7 +235,7 @@ export const navData = [
       },
       {
         title: 'Params',
-        path: '/dashboard/params?id=e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1',
+        path: '/params?id=e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1',
         icon: ICONS.parameter,
       },
       {
@@ -241,7 +244,7 @@ export const navData = [
         icon: ICONS.external,
         info: <Iconify width={18} icon="prime:external-link" />,
       },
-      { title: 'Blank', path: paths.dashboard.blank, icon: ICONS.blank },
+      { title: 'Blank', path: paths.blank, icon: ICONS.blank },
     ],
   },
 ];

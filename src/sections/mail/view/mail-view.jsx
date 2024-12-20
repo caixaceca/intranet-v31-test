@@ -55,8 +55,7 @@ export function MailView() {
         openNav.onFalse();
       }
 
-      const redirectPath =
-        labelId !== LABEL_INDEX ? `${paths.dashboard.mail}?label=${labelId}` : paths.dashboard.mail;
+      const redirectPath = labelId !== LABEL_INDEX ? `${paths.mail}?label=${labelId}` : paths.mail;
 
       if (selectedLabelId !== labelId) {
         startTransition(() => {
@@ -75,8 +74,8 @@ export function MailView() {
 
       const redirectPath =
         selectedLabelId !== LABEL_INDEX
-          ? `${paths.dashboard.mail}?id=${mailId}&label=${selectedLabelId}`
-          : `${paths.dashboard.mail}?id=${mailId}`;
+          ? `${paths.mail}?id=${mailId}&label=${selectedLabelId}`
+          : `${paths.mail}?id=${mailId}`;
 
       if (selectedMailId !== mailId) {
         startTransition(() => {

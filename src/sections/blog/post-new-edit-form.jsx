@@ -84,7 +84,7 @@ export function PostNewEditForm({ currentPost }) {
       reset();
       showPreview.onFalse();
       toast.success(currentPost ? 'Update success!' : 'Create success!');
-      router.push(paths.dashboard.post.root);
+      router.push(paths.post.root);
       console.info('DATA', data);
     } catch (error) {
       console.error(error);

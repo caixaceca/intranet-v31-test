@@ -182,7 +182,7 @@ export function OverviewFileView() {
             <Box sx={{ mt: 5 }}>
               <FileManagerPanel
                 title="Folders"
-                link={paths.dashboard.fileManager}
+                link={paths.fileManager}
                 onOpen={newFolderDialog.onTrue}
               />
 
@@ -206,7 +206,7 @@ export function OverviewFileView() {
 
               <FileManagerPanel
                 title="Recent files"
-                link={paths.dashboard.fileManager}
+                link={paths.fileManager}
                 onOpen={newFilesDialog.onTrue}
               />
 

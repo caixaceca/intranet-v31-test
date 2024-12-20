@@ -19,14 +19,14 @@ export function UserCardsView() {
       <CustomBreadcrumbs
         heading="User cards"
         links={[
-          { name: 'Dashboard', href: paths.dashboard.root },
-          { name: 'User', href: paths.dashboard.user.root },
+          { name: 'Dashboard', href: paths.root },
+          { name: 'User', href: paths.user.root },
           { name: 'Cards' },
         ]}
         action={
           <Button
             component={RouterLink}
-            href={paths.dashboard.user.new}
+            href={paths.user.new}
             variant="contained"
             startIcon={<Iconify icon="mingcute:add-line" />}
           >

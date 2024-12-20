@@ -107,7 +107,7 @@ export function TourNewEditForm({ currentTour }) {
       await new Promise((resolve) => setTimeout(resolve, 500));
       reset();
       toast.success(currentTour ? 'Update success!' : 'Create success!');
-      router.push(paths.dashboard.tour.root);
+      router.push(paths.tour.root);
       console.info('DATA', data);
     } catch (error) {
       console.error(error);

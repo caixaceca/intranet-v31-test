@@ -28,8 +28,8 @@ export function JobDetailsView({ job }) {
 
   const renderToolbar = () => (
     <JobDetailsToolbar
-      backHref={paths.dashboard.job.root}
-      editHref={paths.dashboard.job.edit(`${job?.id}`)}
+      backHref={paths.job.root}
+      editHref={paths.job.edit(`${job?.id}`)}
       liveHref="#"
       publish={publish || ''}
       onChangePublish={handleChangePublish}
